@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxcare</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+    <!-- font-awesome cdns -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./output/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-nav bg-lightBlue p-1.5 relative z-999 font-urbanist">
+        <div
+          class="container flex items-center justify-between gap-4 flex-wrap relative"
+        >
+          <!-- left info -->
+          <div
+            class="basic-info flex items-center gap-6 flex-wrap text-white xs:text-[11px] sm:text-xs md:text-sm lg:text-sm xs:w-full xs:justify-center lg:w-auto lg:justify-start"
+          >
+            <div class="time flex items-center gap-2">
+              <span><i class="fa-regular fa-clock"></i></span>
+              <span>Mon - Fri : 8:00 - 16:00</span>
+            </div>
+
+            <div class="mail-contact flex items-center gap-2">
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <span>maxcareservices@email.com</span>
+            </div>
+
+            <div class="address-contact flex items-center gap-2">
+              <span><i class="fa-regular fa-building"></i></span>
+              <span>28 Street, New York, USA</span>
+            </div>
+          </div>
+
+          <!-- emergency -->
+          <div
+            class="emergency flex items-center gap-2 font-medium px-4 py-1.5 xs:text-xs sm:text-sm lg:text-base xs:static xs:h-auto xs:mx-auto lg:absolute lg:h-10 lg:left-176 xs:order-1 lg:order-none emergency-ani z-1000"
+          >
+            <span
+              class="w-6 h-6 flex items-center justify-center rounded-full border xs:text-xs lg:text-sm"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </span>
+            <span class="whitespace-nowrap"> 24-Hour Emergency Aid </span>
+          </div>
+
+          <!-- social -->
+          <div
+            class="socialMedia-links flex xs:w-full xs:justify-center lg:w-auto lg:justify-end"
+          >
+            <div
+              class="flex items-center gap-4 text-white xs:text-base sm:text-lg lg:text-lg"
+            >
+              <a href="#" class="hover:text-gray-200"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="hover:text-gray-200"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-gray-200"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" class="hover:text-gray-200"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="main-nav glass-effect absolute z-998 w-full p-4 font-urbanist"
+      >
+        <div class="container">
+          <nav class="flex items-center justify-between">
+            <!-- logo (always visible) -->
+            <div class="nav-logo flex items-center">
+              <img
+                src="./images/logo.png"
+                alt="logo"
+                class="logo-w xs:h-4 sm:h-7 lg:h-auto"
+              />
+            </div>
+
+            <!-- nav links (desktop only) -->
+            <div class="nav-links hidden lg:block">
+              <ul class="flex items-center gap-8 capitalize text-inactive">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./services.html" class="active">services</a></li>
+                <li><a href="./case_study.html">case studies</a></li>
+                <li><a href="./our_doctor.html">our doctor</a></li>
+                <li><a href="./contact.html">contacts</a></li>
+              </ul>
+            </div>
+
+            <!-- right part (desktop only) -->
+            <div
+              class="nav-menu-part hidden lg:flex items-center gap-6 text-white border-l"
+            >
+              <!-- call -->
+              <div class="call-contact flex items-center gap-2 ml-4">
+                <div
+                  class="relative flex items-center justify-center w-10 h-10"
+                >
+                  <span
+                    class="absolute inset-0 rounded-full border-2 bg-gradient-to-r from-lightBlue to-deepBlue animate-call-ring"
+                  ></span>
+                  <i
+                    class="fa-solid fa-phone text-white text-sm relative z-10"
+                  ></i>
+                </div>
+                <div class="text-sm leading-tight">
+                  <p>Have Any Questions?</p>
+                  <p class="font-medium">+020.098.456</p>
+                </div>
+              </div>
+
+              <!-- menu image -->
+              <div class="menu flex items-center border-l pl-4">
+                <img src="./images/menu.png" alt="menu" class="h-5" />
+              </div>
+            </div>
+
+            <!-- toggle button  -->
+            <button
+              id="menuToggle"
+              class="lg:hidden flex flex-col gap-1 text-white"
+            >
+              <!-- fully custom toggle -->
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </nav>
+
+          <!-- toggle content  -->
+          <div
+            id="mobileMenu"
+            class="hidden lg:hidden mt-4 bg-white rounded-xl p-6"
+          >
+            <!-- links -->
+            <ul class="flex flex-col gap-4 capitalize text-black mb-6">
+              <li><a href="./index.html">home</a></li>
+              <li><a href="./about.html">about</a></li>
+              <li><a href="./services.html">services</a></li>
+              <li><a href="./case_study.html">case studies</a></li>
+              <li><a href="./our_doctor.html">our doctor</a></li>
+              <li><a href="./contact.html">contacts</a></li>
+            </ul>
+
+            <!-- call part -->
+            <div class="flex items-center gap-3 mb-6">
+              <div class="relative flex items-center justify-center w-9 h-9">
+                <span
+                  class="absolute inset-0 rounded-full border-2 bg-gradient-to-r from-lightBlue to-deepBlue animate-call-ring"
+                ></span>
+                <i
+                  class="fa-solid fa-phone text-white text-xs relative z-10"
+                ></i>
+              </div>
+              <div class="text-sm">
+                <p>Have Any Questions?</p>
+                <p class="font-medium">+020.098.456</p>
+              </div>
+            </div>
+
+            <!-- menu image -->
+            <div class="flex items-center">
+              <img src="./images/menu.png" alt="menu" class="h-5" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="services-page bg-[url('/images/page-banner.png')] relative xs:h-[220px] sm:h-[280px] md:h-[340px] lg:h-[420px] flex items-center bg-cover bg-center font-urbanist"
+      >
+        <div class="container">
+          <div
+            class="flex items-center justify-between xs:px-4 sm:px-6 lg:mx-12"
+          >
+            <!-- left title -->
+            <h1
+              class="text-white font-semibold xs:text-2xl sm:text-3xl lg:text-5xl"
+            >
+              Our Services
+            </h1>
+
+            <!-- right breadcrumb -->
+            <div
+              class="flex items-center gap-2 text-white xs:text-xs sm:text-sm"
+            >
+              <a href="#" class="opacity-80 hover:opacity-100">Home</a>
+              <i class="fa-solid fa-chevron-right text-[10px] sm:text-xs"></i>
+              <span class="text-cyan-400">Our Services</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- specialized part -->
+      <section class="special bg-veryLightBlue xs:py-16 sm:py-20 lg:p-30">
+        <div class="container">
+          <div class="max-w-7xl mx-auto xs:px-4 sm:px-6 font-urbanist">
+            <!-- section heading -->
+            <div class="text-center mb-12 sm:mb-16">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6 uppercase"
+              >
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>specialized treatments</span>
+              </div>
+
+              <h2
+                class="font-semibold font-urbanist text-deepBlue-font xs:text-2xl xs:leading-tight sm:text-3xl sm:leading-snug lg:text-4xl xl:text-5xl mb-4 sm:mb-6"
+              >
+                Have a Look on Our Amazing <br class="hidden sm:block" />
+                Medical Services
+              </h2>
+            </div>
+
+            <!-- service icons -->
+            <div
+              class="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20"
+            >
+              <!-- active item -->
+              <div
+                class="flex flex-col items-center bg-cyan-500 rounded-2xl p-2"
+              >
+                <div
+                  class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
+                >
+                  <img src="./images/servi-1.png" alt="servi 1" />
+                </div>
+                <p
+                  class="xs:text-xs sm:text-sm font-medium text-center text-white"
+                >
+                  specialized <br />
+                  medicine & surgery
+                </p>
+              </div>
+
+              <!-- item -->
+              <div class="flex flex-col items-center">
+                <div
+                  class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
+                >
+                  <img src="./images/servi-2.png" alt="" />
+                </div>
+                <p class="xs:text-xs sm:text-sm text-center">
+                  emergency & <br />
+                  critical care
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div
+                  class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
+                >
+                  <img src="./images/servi-3.png" alt="" />
+                </div>
+                <p class="xs:text-xs sm:text-sm text-center">
+                  laboratory <br />
+                  services
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div
+                  class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
+                >
+                  <img src="./images/servi-4.png" alt="" />
+                </div>
+                <p class="xs:text-xs sm:text-sm text-center">
+                  rehabilitation <br />
+                  services
+                </p>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div
+                  class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
+                >
+                  <img src="./images/servi-5.png" alt="" />
+                </div>
+                <p class="xs:text-xs sm:text-sm text-center">
+                  women & child <br />
+                  care
+                </p>
+              </div>
+            </div>
+
+            <!-- service cards -->
+            <div class="bg-cyan-100 rounded-[32px] xs:p-4 sm:p-6 lg:p-8">
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+              >
+                <!-- card -->
+                <div class="bg-white rounded-3xl p-5 sm:p-6 flex flex-col">
+                  <div class="rounded-2xl overflow-hidden mb-4 sm:mb-6">
+                    <img src="./images/treat-1.png" alt="trat 1" />
+                  </div>
+
+                  <h3
+                    class="text-base sm:text-lg font-semibold mb-2 sm:mb-3 capitalize"
+                  >
+                    general surgery
+                  </h3>
+
+                  <p class="text-gray-500 xs:text-xs sm:text-sm mb-5 sm:mb-6">
+                    our neurology department provides expert care for conditions
+                    affecting the brain, spine, and nervous system
+                  </p>
+
+                  <a
+                    href="#"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                  >
+                    read more
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+
+                <!-- card -->
+                <div class="bg-white rounded-3xl p-5 sm:p-6 flex flex-col">
+                  <div class="rounded-2xl overflow-hidden mb-4 sm:mb-6">
+                    <img src="./images/treat-2.png" alt="trat 2" />
+                  </div>
+
+                  <h3
+                    class="text-base sm:text-lg font-semibold mb-2 sm:mb-3 capitalize"
+                  >
+                    internal medicine
+                  </h3>
+
+                  <p class="text-gray-500 xs:text-xs sm:text-sm mb-5 sm:mb-6">
+                    our neurology department provides expert care for conditions
+                    affecting the brain, spine, and nervous system
+                  </p>
+
+                  <a
+                    href="#"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                  >
+                    read more
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+
+                <!-- card -->
+                <div class="bg-white rounded-3xl p-5 sm:p-6 flex flex-col">
+                  <div class="rounded-2xl overflow-hidden mb-4 sm:mb-6">
+                    <img src="./images/treat-3.png" alt="trat 3" />
+                  </div>
+
+                  <h3
+                    class="text-base sm:text-lg font-semibold mb-2 sm:mb-3 capitalize"
+                  >
+                    obstetrics & gynecology
+                  </h3>
+
+                  <p class="text-gray-500 xs:text-xs sm:text-sm mb-5 sm:mb-6">
+                    our neurology department provides expert care for conditions
+                    affecting the brain, spine, and nervous system
+                  </p>
+
+                  <a
+                    href="#"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                  >
+                    read more
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- uniqueness -->
+      <section
+        class="bg-deepBlue-font rounded-[32px] py-20 font-urbanist mb-30"
+      >
+        <div class="container">
+          <div
+            class="grid grid-cols-1 gap-12 text-center text-white md:grid-cols-2 lg:grid-cols-5 mx-3"
+          >
+            <!-- item 1 -->
+            <div class="flex flex-col items-center">
+              <div class="relative mb-6">
+                <div class="h-32 w-32 rounded-full border-4 border-cyan-500">
+                  <img src="./images/step-1.png" alt="step" />
+                </div>
+                <!-- <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold"
+                >
+                  01
+                </span> -->
+              </div>
+
+              <h3 class="mb-3 text-lg font-semibold">Book an Appointment</h3>
+              <p class="text-sm text-white/70">
+                Select your preferred date, time, and doctor using our easy
+                online booking system or by calling our help desk.
+              </p>
+            </div>
+
+            <!-- item 2 -->
+            <div class="flex flex-col items-center">
+              <div class="relative mb-6">
+                <div class="h-32 w-32 rounded-full border-4 border-cyan-500">
+                  <img src="./images/step-2.png" alt="step" />
+                </div>
+                <!-- <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold"
+                >
+                  02
+                </span> -->
+              </div>
+
+              <h3 class="mb-3 text-lg font-semibold">Confirm Your Schedule</h3>
+              <p class="text-sm text-white/70">
+                Receive confirmation via SMS or email with details of your
+                consultation, including doctor’s profile and location.
+              </p>
+            </div>
+
+            <!-- item 3 -->
+            <div class="flex flex-col items-center">
+              <div class="relative mb-6">
+                <div class="h-32 w-32 rounded-full border-4 border-cyan-500">
+                  <img src="./images/step-3.png" alt="stap" />
+                </div>
+                <!-- <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold"
+                >
+                  03
+                </span> -->
+              </div>
+
+              <h3 class="mb-3 text-lg font-semibold">Meet Your Doctor</h3>
+              <p class="text-sm text-white/70">
+                Visit the hospital or join a secure video call at your scheduled
+                time. Our specialists will assess your health condition
+                thoroughly.
+              </p>
+            </div>
+
+            <!-- item 4 -->
+            <div class="flex flex-col items-center">
+              <div class="relative mb-6">
+                <div class="h-32 w-32 rounded-full border-4 border-cyan-500">
+                  <img src="./images/step-4.png" alt="step" />
+                </div>
+                <!-- <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold"
+                >
+                  04
+                </span> -->
+              </div>
+
+              <h3 class="mb-3 text-lg font-semibold">Get Diagnosis & Advice</h3>
+              <p class="text-sm text-white/70">
+                Receive a proper diagnosis, treatment plan, and prescription if
+                needed with clear explanations and care instructions.
+              </p>
+            </div>
+
+            <!-- item 5 -->
+            <div class="flex flex-col items-center">
+              <div class="relative mb-6">
+                <div class="h-32 w-32 rounded-full border-4 border-cyan-500">
+                  <img src="./images/step-5.png" alt="step" />
+                </div>
+                <!-- <span
+                  class="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-3 py-1 text-sm font-semibold"
+                >
+                  05
+                </span> -->
+              </div>
+
+              <h3 class="mb-3 text-lg font-semibold">Follow-Up Support</h3>
+              <p class="text-sm text-white/70">
+                Our team will guide you with aftercare, test results, and
+                follow-up appointments for ongoing support and peace of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- strip part -->
+      <section class="strip mb-30 bg-no-repeat">
+        <div class="container">
+          <div class="max-w-7xl mx-auto px-6 font-urbanist">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+              <!-- first main card -->
+              <div
+                class="relative col-span-1 lg:col-span-2 rounded-3xl overflow-hidden"
+              >
+                <!-- bg image -->
+                <img
+                  src="./images/strip-img1.png"
+                  alt=" strip img"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+
+                <!-- content -->
+                <div
+                  class="stripTxt relative z-10 grid grid-cols-1 lg:grid-cols-2 h-full p-4 gap-8"
+                >
+                  <!-- left text -->
+                  <div class="text-white flex flex-col mt-12">
+                    <p class="text-lg uppercase mb-4">welcome to maxcare</p>
+
+                    <h2
+                      class="text-4xl font-semibold leading-tight font-urbanist strip-w"
+                    >
+                      Committed to Ensure Quality Healthcare
+                    </h2>
+                  </div>
+
+                  <!-- inner white card -->
+                  <div
+                    class="bg-white rounded-3xl p-8 shadow-xl flex flex-col justify-between"
+                  >
+                    <div>
+                      <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900">
+                          get appointment
+                        </h3>
+                        <div><i class="fa-solid fa-plus"></i></div>
+                      </div>
+
+                      <p
+                        class="text-gray-500 mb-6 text-sm text-justify tracking-normal"
+                      >
+                        call us 24/7 with any emergency or to schedule an
+                        appointment & check your health.
+                      </p>
+
+                      <div class="flex gap-4 items-start">
+                        <div class="text-lightBlue">
+                          <i class="fa-solid fa-phone"></i>
+                          <p class="text-lightBlue">Call Us</p>
+                        </div>
+                        <div class="text-deepBlue-font font-medium">
+                          <p>+811.2311.785</p>
+                          <p>+811.2311.657</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a
+                      href="#"
+                      class="mt-6 flex justify-center gap-2 items-center font-semibold text-lg"
+                    >
+                      request an appointment
+                      <span><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- second card -->
+              <div
+                class="rounded-3xl bg-gradient-to-br from-cyan-100 to-cyan-400 p-8 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold">visit our center</h3>
+                    <div><i class="fa-regular fa-house"></i></div>
+                  </div>
+
+                  <p class="text-gray-700 mb-6 text-sm">
+                    with more than twenty one locations across the country, we
+                    are confident in providing the best care.
+                  </p>
+
+                  <div>
+                    <p class="font-semibold mb-1">visit our clinic</p>
+                    <p class="text-gray-700 text-sm">
+                      office: 29 madison street, studio mia<br />
+                      la 20183, usa
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-8 flex gap-2 justify-center items-center font-semibold"
+                >
+                  request an appointment
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+
+              <!-- third card -->
+              <div
+                class="rounded-3xl bg-cyan-500 text-white p-8 flex flex-col justify-between"
+              >
+                <div>
+                  <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold">opening hours</h3>
+                    <div><i class="fa-regular fa-clock"></i></div>
+                  </div>
+
+                  <ul class="text-sm">
+                    <li
+                      class="flex justify-between border-b border-white/30 pb-2"
+                    >
+                      <span>monday – thursday</span>
+                      <span>08:00 – 18:00</span>
+                    </li>
+                    <li
+                      class="flex justify-between border-b border-white/30 pb-2"
+                    >
+                      <span>friday</span>
+                      <span>08:00 – 18:00</span>
+                    </li>
+                    <li
+                      class="flex justify-between border-b border-white/30 pb-2"
+                    >
+                      <span>saturday</span>
+                      <span>08:00 – 18:00</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>sunday</span>
+                      <span>08:00 – 18:00</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <a
+                  href="#"
+                  class="mt-8 flex justify-center gap-2 items-center font-semibold"
+                >
+                  request an appointment
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer
+      class="bg-[url('/images/footer-img.png')] bg-cover bg-center relative xs:py-12 sm:py-16 lg:p-10 font-urbanist text-white"
+    >
+      <div class="max-w-7xl mx-auto xs:px-4 sm:px-6">
+        <!-- top footer -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 capitalize"
+        >
+          <!-- brand -->
+          <div>
+            <div class="mb-6">
+              <img
+                src="./images/logo.png"
+                alt="footer logo"
+              />
+            </div>
+
+            <p class="xs:text-xs sm:text-sm text-white/80 mb-6 max-w-xs">
+              Maxcare has been offering comprehensive medical services across a
+              wide range of specialties all over USA.
+            </p>
+
+            <div class="flex gap-3 sm:gap-4">
+              <a
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
+              >
+                <i class="fa-brands fa-google"></i>
+              </a>
+              <a
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
+              >
+                <i class="fa-brands fa-pinterest"></i>
+              </a>
+              <a
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- our services -->
+          <div>
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              our services
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
+              <li><a href="#">diagnostic & imaging services</a></li>
+              <li><a href="#">specialized medical services</a></li>
+              <li><a href="#">women’s health services</a></li>
+              <li><a href="#">emergency & critical care</a></li>
+              <li><a href="#">preventive health & wellness</a></li>
+            </ul>
+          </div>
+
+          <!-- for customers -->
+          <div>
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              for customers
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
+              <li><a href="#">upload prescription</a></li>
+              <li><a href="#">request a call back</a></li>
+              <li><a href="#">healthcare packages</a></li>
+              <li><a href="#">download reports</a></li>
+              <li><a href="#">track progress</a></li>
+            </ul>
+          </div>
+
+          <!-- opening hour -->
+          <div>
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              opening hour
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
+              <li class="flex justify-between">
+                <span>monday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>tuesday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>wednesday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>thursday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>friday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>saturday</span><span>9am – 9pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span>sunday</span><span>closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- contact bar -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 border-t border-white/20 mt-12 sm:mt-16 pt-8"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <p class="xs:text-xs sm:text-sm">book your consultation</p>
+              <p class="font-semibold">+020.098.456</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
+            >
+              <i class="fa-regular fa-envelope-open"></i>
+            </div>
+            <p class="font-semibold xs:text-xs sm:text-sm">
+              maxcare3456mail@gmail.com
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p class="font-semibold xs:text-xs sm:text-sm">
+              231 Utah City Centre, Utah, USA
+            </p>
+          </div>
+        </div>
+
+        <!-- bottom bar -->
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 mt-10 sm:mt-12 xs:text-xs sm:text-sm text-white/70"
+        >
+          <p>
+            © 2025,
+            <a href="#" class="text-cyan-400">Maxcare</a>, All rights reserved
+          </p>
+
+          <div class="flex gap-4 sm:gap-6 capitalize">
+            <a href="#">privacy policy</a>
+            <a href="#">terms & condition</a>
+            <a href="#">*promo t&cs apply</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
