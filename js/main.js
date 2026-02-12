@@ -18,7 +18,7 @@ let index = 0;
 
 setInterval(() => {
   index = (index + 1) % images.length;
-  banner.style.backgroundImage = `url('${images[index]}')`;
+  banner.style.backgroundImage = `url('${images[index]}');`;
 }, 4000);
 
 // banner txt effect
