@@ -13,12 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = [
     "images/banner-1.png",
     "images/banner-2.png",
-    "images/banner-3.png",
+    "images/banner-3.png"
   ];
 
   let index = 0;
 
-  setInterval(() => {
+  // set first image
+  banner.style.backgroundImage = `url('${images[index]}')`;
+
+  setInterval(function () {
     index = (index + 1) % images.length;
     banner.style.backgroundImage = `url('${images[index]}')`;
   }, 4000);
