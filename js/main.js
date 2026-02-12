@@ -8,18 +8,17 @@ toggleBtn.addEventListener("click", () => {
 
 // sliding banner part
 const banner = document.getElementById("banner");
-
 const images = [
-  "./images/banner-1.png",
-  "./images/banner-2.png",
-  "./images/banner-3.png",
+  "/images/banner-1.png",
+  "/images/banner-2.png",
+  "/images/banner-3.png",
 ];
 
 let index = 0;
 
 setInterval(() => {
   index = (index + 1) % images.length;
-  banner.style.backgroundImage = `url('${images[index]}')`;
+  banner.style.backgroundImage = `url('${images[index]}')`
 }, 4000);
 
 // banner txt effect
