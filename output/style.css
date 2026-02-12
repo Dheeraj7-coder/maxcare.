@@ -2113,20 +2113,6 @@
     animation: rotateRing 2.5s linear infinite;
   }
 }
-@keyframes bannerSlide {
-  0% {
-    background-image: url("./images/banner-1.png");
-  }
-  33% {
-    background-image: url("./images/banner-2.png");
-  }
-  66% {
-    background-image: url("./images/banner-3.png");
-  }
-  100% {
-    background-image: url("./images/banner-1.png");
-  }
-}
 @keyframes moveLTR {
   0% {
     transform: translate3d(0, 0, 0);
