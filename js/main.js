@@ -7,19 +7,22 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // sliding banner part
-const banner = document.getElementById("banner");
-const images = [
-  "/images/banner-1.png",
-  "/images/banner-2.png",
-  "/images/banner-3.png",
-];
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("banner");
 
-let index = 0;
+  const images = [
+    "images/banner-1.png",
+    "images/banner-2.png",
+    "images/banner-3.png",
+  ];
 
-setInterval(() => {
-  index = (index + 1) % images.length;
-  banner.style.backgroundImage = `url('${images[index]}')`
-}, 4000);
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    banner.style.backgroundImage = `url('${images[index]}')`;
+  }, 4000);
+});
 
 // banner txt effect
 const headings = [
