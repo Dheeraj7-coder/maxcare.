@@ -107,7 +107,7 @@
               <img
                 src="./images/logo.png"
                 alt="logo"
-                class="logo-w xs:h-4 sm:h-7 lg:h-auto"
+                class="w-24 sm:w-28 md:w-32 lg:w-36 h-auto"
               />
             </div>
 
@@ -227,7 +227,7 @@
         </div>
       </section>
       <!-- about part -->
-      <section class="about mb-30">
+      <section class="about mb-30 font-urbanist">
         <div class="container">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 font-urbanist">
             <div
@@ -246,7 +246,7 @@
               <div>
                 <!-- badge -->
                 <div
-                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6"
+                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6 uppercase"
                 >
                   <i class="fa-solid fa-stethoscope"></i>
                   <span>about maxcare</span>
@@ -306,14 +306,14 @@
                 </div>
 
                 <!-- actions -->
-                <div class="flex flex-wrap items-center gap-6">
+                <div class="flex flex-wrap items-center justify-center gap-6">
                   <!-- button -->
                   <button
-                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base"
+                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base mt-0 transition-all duration-300 hover:bg-deepBlue hover:text-white hover:shadow-[0_8px_25px_rgba(0,0,0,0.50)] group"
                   >
                     <span>Book an Appoinment</span>
                     <span
-                      class="rounded-full bg-white text-lightBlue flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5"
+                      class="rounded-full bg-white text-lightBlue flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5 transition-transform duration-300 group-hover:-rotate-12"
                     >
                       <i class="fa-solid fa-arrow-right"></i>
                     </span>
@@ -450,96 +450,115 @@
         </div>
       </section>
       <!-- why choose -->
-      <section class="choose relate mb-30">
-        <div class="container relative">
-          <div class="relative bg-white rounded-[40px] p-16">
+      <section class="choose relative mb-30">
+        <div class="container xs:px-4 sm:px-6">
+          <div class="bg-white rounded-[40px] xs:p-6 sm:p-8 lg:p-16">
             <div
-              class="relative z-10 max-w-xl bg-[#F3FAFD] rounded-[32px] p-12"
+              class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-10"
             >
+              <!-- left content -->
               <div
-                class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 text-sm mb-6 uppercase"
+                class="max-w-xl bg-[#F3FAFD] rounded-[32px] xs:p-6 sm:p-8 lg:p-12"
               >
-                <i class="fa-solid fa-stethoscope"></i>
-                <span>WHY CHOOSE US</span>
-              </div>
-
-              <h2
-                class="xl:text-5xl text-4xl font-semibold leading-tight font-urbanist mb-6 text-deepBlue-font"
-              >
-                The Reasons to Choose <br />
-                Maxcare Medical
-              </h2>
-
-              <div class="space-y-8">
-                <div class="flex gap-4">
-                  <span
-                    class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 text-white"
-                    >1</span
-                  >
-                  <div>
-                    <p class="font-semibold text-deepBlue-font">
-                      Hygienic & Safe Environment
-                    </p>
-                    <p class="text-sm text-gray-500">
-                      Equipped with state-of-the-art technology and driven by
-                      excellence
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex gap-4">
-                  <span
-                    class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 text-white"
-                    >2</span
-                  >
-                  <div>
-                    <p class="font-semibold text-deepBlue-font">
-                      Affordable & Transparent Billing
-                    </p>
-                    <p class="text-sm text-gray-500">
-                      Promoting lifelong wellness for individuals and families
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex gap-4">
-                  <span
-                    class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 text-white"
-                    >3</span
-                  >
-                  <div>
-                    <p class="font-semibold text-deepBlue-font">
-                      Focus on Recovery & Wellness
-                    </p>
-                    <p class="text-sm text-gray-500">
-                      Doctors and healthcare professionals working
-                      collaboratively
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="absolute right-0 top-1/2 -translate-y-1/2 z-8">
-              <img
-                src="./images/why-choose-img.png"
-                alt="doctor consultation"
-                class="rounded-[32px] max-w-[520px]"
-              />
-
-              <!-- EXPERIENCE BLOCK -->
-              <div class="mt-8 flex items-start justify-center gap-2 ml-6">
-                <p class="text-6xl font-bold text-deepBlue-font">16</p>
-                <p
-                  class="font-semibold text-deepBlue-font w-min text-sm mt-4 mr-4"
+                <div
+                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6 uppercase"
                 >
-                  Years of Experience
-                </p>
-                <div>
-                  <p class="text-sm text-gray-500 max-w-xs">
-                    At Maxcare, we are dedicated to delivering exceptional
-                    healthcare with compassion, innovation, and integrity.
+                  <i class="fa-solid fa-stethoscope"></i>
+                  <span>WHY CHOOSE US</span>
+                </div>
+
+                <h2
+                  class="font-semibold font-urbanist text-deepBlue-font mb-4 sm:mb-6 xs:text-2xl xs:leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
+                >
+                  The Reasons to Choose <br />
+                  Maxcare Medical
+                </h2>
+
+                <div class="space-y-6 sm:space-y-8">
+                  <div class="flex gap-3 sm:gap-4">
+                    <span
+                      class="flex xs:h-5 xs:w-9 sm:h-7 sm:w-10 items-center justify-center rounded-full bg-cyan-500 text-white xs:text-xs sm:text-sm"
+                      >1</span
+                    >
+                    <div>
+                      <p
+                        class="font-semibold text-deepBlue-font xs:text-sm sm:text-base"
+                      >
+                        Hygienic & Safe Environment
+                      </p>
+                      <p class="xs:text-xs sm:text-sm text-gray-500">
+                        Equipped with state-of-the-art technology and driven by
+                        excellence
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 sm:gap-4">
+                    <span
+                      class="flex xs:h-5 xs:w-7 sm:h-7 sm:w-10 items-center justify-center rounded-full bg-cyan-500 text-white xs:text-xs sm:text-sm"
+                      >2</span
+                    >
+                    <div>
+                      <p
+                        class="font-semibold text-deepBlue-font xs:text-sm sm:text-base"
+                      >
+                        Affordable & Transparent Billing
+                      </p>
+                      <p class="xs:text-xs sm:text-sm text-gray-500">
+                        Promoting lifelong wellness for individuals and families
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 sm:gap-4">
+                    <span
+                      class="flex xs:h-5 xs:w-8 sm:h-7 sm:w-10 items-center justify-center rounded-full bg-cyan-500 text-white xs:text-xs sm:text-sm"
+                      >3</span
+                    >
+                    <div>
+                      <p
+                        class="font-semibold text-deepBlue-font xs:text-sm sm:text-base"
+                      >
+                        Focus on Recovery & Wellness
+                      </p>
+                      <p class="xs:text-xs sm:text-sm text-gray-500">
+                        Doctors and healthcare professionals working
+                        collaboratively
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- right image -->
+              <div class="flex flex-col items-center xs:mt-6 lg:mt-0">
+                <img
+                  src="./images/why-choose-img.png"
+                  alt="doctor consultation"
+                  class="rounded-[32px] w-full xs:max-w-full sm:max-w-md lg:max-w-[520px]"
+                />
+
+                <!-- experience -->
+                <div
+                  class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-2 sm:ml-6"
+                >
+                  <p
+                    class="xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-deepBlue-font"
+                  >
+                    16
                   </p>
+
+                  <div class="text-center sm:text-left">
+                    <p
+                      class="font-semibold text-deepBlue-font xs:text-xs sm:text-sm"
+                    >
+                      Years of Experience
+                    </p>
+                    <p class="text-gray-500 xs:text-xs sm:text-sm max-w-xs">
+                      At Maxcare, we are dedicated to delivering exceptional
+                      healthcare with compassion, innovation, and integrity.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -649,53 +668,57 @@
           </div>
         </div>
       </section>
+      <!-- navi to top -->
+      <div
+        id="goTop"
+        class="go-to-top fixed bottom-6 right-6 w-8 h-8 rounded-full bg-gotop text-white flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 z-50"
+      >
+        <span class="text-xl"><i class="fa-solid fa-arrow-up"></i></span>
+      </div>
     </main>
     <!-- footer -->
     <footer
-      class="bg-[url('/images/footer-img.png')] bg-cover bg-center relative p-10 font-urbanist text-white"
+      class="bg-[url('/images/footer-img.png')] bg-cover bg-center relative xs:py-12 sm:py-16 lg:p-10 font-urbanist text-white"
     >
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto xs:px-4 sm:px-6">
         <!-- top footer -->
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 capitalize">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 capitalize"
+        >
           <!-- brand -->
           <div>
             <div class="mb-6">
               <img src="./images/logo.png" alt="footer logo" />
             </div>
 
-            <p class="text-sm text-white/80 mb-6">
+            <p class="xs:text-xs sm:text-sm text-white/80 mb-6 max-w-xs">
               Maxcare has been offering comprehensive medical services across a
               wide range of specialties all over USA.
             </p>
 
-            <div class="flex gap-4">
+            <div class="flex gap-3 sm:gap-4">
               <a
-                href="#"
-                class="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10"
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
               <a
-                href="#"
-                class="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10"
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
               <a
-                href="#"
-                class="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10"
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
               >
                 <i class="fa-brands fa-google"></i>
               </a>
               <a
-                href="#"
-                class="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10"
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
               >
                 <i class="fa-brands fa-pinterest"></i>
               </a>
               <a
-                href="#"
-                class="h-10 w-10 flex items-center justify-center rounded-lg bg-white/10"
+                class="h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-lg bg-white/10"
               >
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
@@ -704,8 +727,12 @@
 
           <!-- our services -->
           <div>
-            <h4 class="mb-6 font-semibold text-3xl">our services</h4>
-            <ul class="space-y-4 text-sm">
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              our services
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
               <li><a href="#">diagnostic & imaging services</a></li>
               <li><a href="#">specialized medical services</a></li>
               <li><a href="#">women’s health services</a></li>
@@ -716,8 +743,12 @@
 
           <!-- for customers -->
           <div>
-            <h4 class="mb-6 font-semibold text-3xl">for customers</h4>
-            <ul class="space-y-4 text-sm">
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              for customers
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
               <li><a href="#">upload prescription</a></li>
               <li><a href="#">request a call back</a></li>
               <li><a href="#">healthcare packages</a></li>
@@ -728,35 +759,32 @@
 
           <!-- opening hour -->
           <div>
-            <h4 class="mb-6 font-semibold text-3xl">opening hour</h4>
-            <ul class="space-y-4 text-sm">
+            <h4
+              class="mb-4 sm:mb-6 font-semibold xs:text-xl sm:text-2xl lg:text-3xl"
+            >
+              opening hour
+            </h4>
+            <ul class="space-y-3 sm:space-y-4 xs:text-xs sm:text-sm">
               <li class="flex justify-between">
-                <a href="#">monday</a>
-                <a href="#">9am – 9pm</a>
+                <span>monday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">tuesday</a>
-                <a href="#">9am – 9pm</a>
+                <span>tuesday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">wednesday</a>
-                <a href="#">9am – 9pm</a>
+                <span>wednesday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">thursday</a>
-                <a href="#">9am – 9pm</a>
+                <span>thursday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">friday</a>
-                <a href="#">9am – 9pm</a>
+                <span>friday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">saturday</a>
-                <a href="#">9am – 9pm</a>
+                <span>saturday</span><span>9am – 9pm</span>
               </li>
               <li class="flex justify-between">
-                <a href="#">sunday</a>
-                <a href="#">closed</a>
+                <span>sunday</span><span>closed</span>
               </li>
             </ul>
           </div>
@@ -764,50 +792,53 @@
 
         <!-- contact bar -->
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 gap-8 border-t border-white/20 mt-16 pt-8"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 border-t border-white/20 mt-12 sm:mt-16 pt-8"
         >
           <div class="flex items-center gap-4">
             <div
-              class="h-12 w-12 flex items-center justify-center rounded-full bg-cyan-500"
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
             >
               <i class="fa-solid fa-phone"></i>
             </div>
             <div>
-              <p class="text-sm">book your consultation</p>
+              <p class="xs:text-xs sm:text-sm">book your consultation</p>
               <p class="font-semibold">+020.098.456</p>
             </div>
           </div>
 
           <div class="flex items-center gap-4">
             <div
-              class="h-12 w-12 flex items-center justify-center rounded-full bg-cyan-500"
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
             >
               <i class="fa-regular fa-envelope-open"></i>
             </div>
-            <p class="font-semibold">maxcare3456mail@gmail.com</p>
+            <p class="font-semibold xs:text-xs sm:text-sm">
+              maxcare3456mail@gmail.com
+            </p>
           </div>
 
           <div class="flex items-center gap-4">
             <div
-              class="h-12 w-12 flex items-center justify-center rounded-full bg-cyan-500"
+              class="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center rounded-full bg-cyan-500"
             >
               <i class="fa-solid fa-location-dot"></i>
             </div>
-            <p class="font-semibold">231 Utah City Centre, Utah, USA</p>
+            <p class="font-semibold xs:text-xs sm:text-sm">
+              231 Utah City Centre, Utah, USA
+            </p>
           </div>
         </div>
 
         <!-- bottom bar -->
         <div
-          class="flex flex-col lg:flex-row justify-between items-center gap-6 mt-12 text-sm text-white/70"
+          class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 mt-10 sm:mt-12 xs:text-xs sm:text-sm text-white/70"
         >
           <p>
             © 2025,
-            <a href="#" class="text-cyan-400">Maxcare</a>
-            , All rights reserved
+            <a href="#" class="text-cyan-400">Maxcare</a>, All rights reserved
           </p>
 
-          <div class="flex gap-6 capitalize">
+          <div class="flex gap-4 sm:gap-6 capitalize">
             <a href="#">privacy policy</a>
             <a href="#">terms & condition</a>
             <a href="#">*promo t&cs apply</a>

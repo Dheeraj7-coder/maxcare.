@@ -84,8 +84,8 @@ var swiper = new Swiper(".mySwiper", {
     },
     992: {
       slidesPerView: 3,
-    }
-  }
+    },
+  },
 });
 
 // cases
@@ -109,6 +109,30 @@ buttons.forEach((btn) => {
     });
   });
 });
+
+// gotop
+document.addEventListener("DOMContentLoaded", function () {
+
+  const goTop = document.getElementById("goTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      goTop.classList.remove("hidden");
+    } else {
+      goTop.classList.add("hidden");
+    }
+  });
+
+  goTop.addEventListener("click", function () {
+    // console.log("hoyeche")
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+});
+
 
 //   form validation
 const form = document.getElementById("appointmentForm");
@@ -165,3 +189,9 @@ function showError(input, error) {
   input.classList.add("error");
   error.classList.remove("hidden");
 }
+
+
+
+// document.getElementById("goBook").onclick = function () {
+//   location.hash = "book";
+// };

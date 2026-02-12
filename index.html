@@ -39,7 +39,7 @@
 
   <body>
     <header>
-      <div class="top-nav bg-lightBlue p-1.5 relative z-999 font-urbanist">
+      <div class="top-nav bg-lightBlue p-1.5 z-999 font-urbanist">
         <div
           class="container flex items-center justify-between gap-4 flex-wrap relative"
         >
@@ -65,7 +65,7 @@
 
           <!-- emergency -->
           <div
-            class="emergency flex items-center gap-2 font-medium px-4 py-1.5 xs:text-xs sm:text-sm lg:text-base xs:static xs:h-auto xs:mx-auto lg:absolute lg:h-10 lg:left-176 xs:order-1 lg:order-none emergency-ani z-1000"
+            class="emergency flex items-center gap-2 font-medium px-4 py-1.5 xs:text-xs sm:text-sm lg:text-base xs:static xs:h-auto xs:mx-auto lg:absolute lg:h-10 lg:left-176 xs:order-1 lg:order-0 emergency-ani z-1000"
           >
             <span
               class="w-6 h-6 flex items-center justify-center rounded-full border xs:text-xs lg:text-sm"
@@ -98,104 +98,107 @@
           </div>
         </div>
       </div>
-      <div
-        class="main-nav glass-effect absolute z-998 w-full p-4 font-urbanist"
-      >
-        <div class="container">
-          <nav class="flex items-center justify-between">
-            <!-- logo (always visible) -->
-            <div class="nav-logo flex items-center">
-              <img
-                src="./images/logo.png"
-                alt="logo"
-                class="logo-w xs:h-4 sm:h-7 lg:h-auto"
-              />
-            </div>
+      <div class="main-nav-position">
+        <div
+          class="main-nav glass-effect absolute z-40 w-full p-4 font-urbanist"
+          id="mainNav"
+        >
+          <div class="container">
+            <nav class="flex items-center justify-between">
+              <!-- logo (always visible) -->
+              <div class="nav-logo flex items-center">
+                <img
+                  src="./images/logo.png"
+                  alt="logo"
+                  class="w-24 sm:w-28 md:w-32 lg:w-36 h-auto"
+                />
+              </div>
 
-            <!-- nav links (desktop only) -->
-            <div class="nav-links hidden lg:block">
-              <ul class="flex items-center gap-8 capitalize text-inactive">
-                <li><a href="./index.html" class="active">home</a></li>
+              <!-- nav links (desktop only) -->
+              <div class="nav-links hidden lg:block">
+                <ul class="flex items-center gap-8 capitalize text-inactive">
+                  <li><a href="./index.html" class="active">home</a></li>
+                  <li><a href="./about.html">about</a></li>
+                  <li><a href="./services.html">services</a></li>
+                  <li><a href="./case_study.html">case studies</a></li>
+                  <li><a href="./our_doctor.html">our doctor</a></li>
+                  <li><a href="./contact.html">contacts</a></li>
+                </ul>
+              </div>
+
+              <!-- right part (desktop only) -->
+              <div
+                class="nav-menu-part hidden lg:flex items-center gap-6 text-white border-l"
+              >
+                <!-- call -->
+                <div class="call-contact flex items-center gap-2 ml-4">
+                  <div
+                    class="relative flex items-center justify-center w-10 h-10"
+                  >
+                    <span
+                      class="absolute inset-0 rounded-full border-2 bg-gradient-to-r from-lightBlue to-deepBlue animate-call-ring"
+                    ></span>
+                    <i
+                      class="fa-solid fa-phone text-white text-sm relative z-10"
+                    ></i>
+                  </div>
+                  <div class="text-sm leading-tight">
+                    <p>Have Any Questions?</p>
+                    <p class="font-medium">+020.098.456</p>
+                  </div>
+                </div>
+
+                <!-- menu image -->
+                <div class="menu flex items-center border-l pl-4">
+                  <img src="./images/menu.png" alt="menu" class="h-5" />
+                </div>
+              </div>
+
+              <!-- toggle button  -->
+              <button
+                id="menuToggle"
+                class="lg:hidden flex flex-col gap-1 text-white"
+              >
+                <!-- fully custom toggle -->
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </nav>
+
+            <!-- toggle content-->
+            <div
+              id="mobileMenu"
+              class="hidden lg:hidden mt-4 bg-white rounded-xl p-6"
+            >
+              <!-- links -->
+              <ul class="flex flex-col gap-4 capitalize text-black mb-6">
+                <li><a href="./index.html">home</a></li>
                 <li><a href="./about.html">about</a></li>
                 <li><a href="./services.html">services</a></li>
                 <li><a href="./case_study.html">case studies</a></li>
                 <li><a href="./our_doctor.html">our doctor</a></li>
                 <li><a href="./contact.html">contacts</a></li>
               </ul>
-            </div>
 
-            <!-- right part (desktop only) -->
-            <div
-              class="nav-menu-part hidden lg:flex items-center gap-6 text-white border-l"
-            >
-              <!-- call -->
-              <div class="call-contact flex items-center gap-2 ml-4">
-                <div
-                  class="relative flex items-center justify-center w-10 h-10"
-                >
+              <!-- call part -->
+              <div class="flex items-center gap-3 mb-6">
+                <div class="relative flex items-center justify-center w-9 h-9">
                   <span
                     class="absolute inset-0 rounded-full border-2 bg-gradient-to-r from-lightBlue to-deepBlue animate-call-ring"
                   ></span>
                   <i
-                    class="fa-solid fa-phone text-white text-sm relative z-10"
+                    class="fa-solid fa-phone text-white text-xs relative z-10"
                   ></i>
                 </div>
-                <div class="text-sm leading-tight">
+                <div class="text-sm">
                   <p>Have Any Questions?</p>
                   <p class="font-medium">+020.098.456</p>
                 </div>
               </div>
 
               <!-- menu image -->
-              <div class="menu flex items-center border-l pl-4">
+              <div class="flex items-center">
                 <img src="./images/menu.png" alt="menu" class="h-5" />
               </div>
-            </div>
-
-            <!-- toggle button  -->
-            <button
-              id="menuToggle"
-              class="lg:hidden flex flex-col gap-1 text-white"
-            >
-              <!-- fully custom toggle -->
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </nav>
-
-          <!-- toggle content-->
-          <div
-            id="mobileMenu"
-            class="hidden lg:hidden mt-4 bg-white rounded-xl p-6"
-          >
-            <!-- links -->
-            <ul class="flex flex-col gap-4 capitalize text-black mb-6">
-              <li><a href="./index.html">home</a></li>
-              <li><a href="./about.html">about</a></li>
-              <li><a href="./services.html">services</a></li>
-              <li><a href="./case_study.html">case studies</a></li>
-              <li><a href="./our_doctor.html">our doctor</a></li>
-              <li><a href="./contact.html">contacts</a></li>
-            </ul>
-
-            <!-- call part -->
-            <div class="flex items-center gap-3 mb-6">
-              <div class="relative flex items-center justify-center w-9 h-9">
-                <span
-                  class="absolute inset-0 rounded-full border-2 bg-gradient-to-r from-lightBlue to-deepBlue animate-call-ring"
-                ></span>
-                <i
-                  class="fa-solid fa-phone text-white text-xs relative z-10"
-                ></i>
-              </div>
-              <div class="text-sm">
-                <p>Have Any Questions?</p>
-                <p class="font-medium">+020.098.456</p>
-              </div>
-            </div>
-
-            <!-- menu image -->
-            <div class="flex items-center">
-              <img src="./images/menu.png" alt="menu" class="h-5" />
             </div>
           </div>
         </div>
@@ -228,11 +231,11 @@
 
               <!-- button -->
               <button
-                class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn bannerBtn xs:mt-4 xs:px-3 xs:py-1.5 xs:text-xs sm:mt-5 sm:px-4 sm:py-2 sm:text-sm lg:mt-6 lg:px-2 lg:py-2 lg:text-base"
+                class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn bannerBtn xs:mt-4 xs:px-3 xs:py-1.5 xs:text-xs sm:mt-5 sm:px-4 sm:py-2 sm:text-sm lg:mt-6 lg:px-2 lg:py-2 lg:text-base transition-all duration-300 hover:bg-lightBlue hover:text-white hover:shadow-[0_8px_25px_rgba(255,255,255,0.25)] group " id="gobook"
               >
                 <span>Book an Appoinment</span>
                 <span
-                  class="rounded-full bg-btn-purpose text-white flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5"
+                  class="rounded-full bg-btn-purpose text-white flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5 transition-transform duration-300 group-hover:-rotate-12"
                 >
                   <i class="fa-solid fa-arrow-right"></i>
                 </span>
@@ -278,7 +281,9 @@
                   >
                     <div>
                       <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900">
+                        <h3
+                          class="text-lg font-semibold text-gray-900 capitalize"
+                        >
                           get appointment
                         </h3>
                         <div><i class="fa-solid fa-plus"></i></div>
@@ -305,10 +310,13 @@
 
                     <a
                       href="#"
-                      class="mt-6 flex justify-center gap-2 items-center font-semibold text-lg"
+                      class="mt-6 flex justify-center gap-2 items-center font-semibold text-sm group capitalize"
                     >
                       request an appointment
-                      <span><i class="fa-solid fa-arrow-right"></i></span>
+                      <span
+                        class="transition-transform duration-300 group-hover:-rotate-12"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
                     </a>
                   </div>
                 </div>
@@ -319,7 +327,9 @@
                 class="rounded-3xl bg-gradient-to-br from-cyan-100 to-cyan-400 p-8 flex flex-col justify-between"
               >
                 <div>
-                  <div class="flex justify-between items-center mb-6">
+                  <div
+                    class="flex justify-between items-center mb-6 capitalize"
+                  >
                     <h3 class="text-lg font-semibold">visit our center</h3>
                     <div><i class="fa-regular fa-house"></i></div>
                   </div>
@@ -340,10 +350,13 @@
 
                 <a
                   href="#"
-                  class="mt-8 flex gap-2 justify-center items-center font-semibold"
+                  class="mt-8 flex gap-2 justify-center items-center font-semibold group capitalize text-sm"
                 >
                   request an appointment
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span
+                    class="transition-transform duration-300 group-hover:-rotate-12"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
                 </a>
               </div>
 
@@ -352,7 +365,9 @@
                 class="rounded-3xl bg-cyan-500 text-white p-8 flex flex-col justify-between"
               >
                 <div>
-                  <div class="flex justify-between items-center mb-6">
+                  <div
+                    class="flex justify-between items-center mb-6 capitalize"
+                  >
                     <h3 class="text-lg font-semibold">opening hours</h3>
                     <div><i class="fa-regular fa-clock"></i></div>
                   </div>
@@ -385,10 +400,13 @@
 
                 <a
                   href="#"
-                  class="mt-8 flex justify-center gap-2 items-center font-semibold"
+                  class="mt-8 flex justify-center gap-2 items-center font-semibold group capitalize text-sm"
                 >
                   request an appointment
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span
+                    class="transition-transform duration-300 group-hover:-rotate-12"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
                 </a>
               </div>
             </div>
@@ -396,7 +414,7 @@
         </div>
       </section>
       <!-- about part -->
-      <section class="about mb-30">
+      <section class="about mb-30 font-urbanist">
         <div class="container">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 font-urbanist">
             <div
@@ -415,7 +433,7 @@
               <div>
                 <!-- badge -->
                 <div
-                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6"
+                  class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6 uppercase"
                 >
                   <i class="fa-solid fa-stethoscope"></i>
                   <span>about maxcare</span>
@@ -475,14 +493,14 @@
                 </div>
 
                 <!-- actions -->
-                <div class="flex flex-wrap items-center gap-6">
+                <div class="flex flex-wrap items-center justify-center gap-6">
                   <!-- button -->
                   <button
-                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base"
+                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base mt-0 transition-all duration-300 hover:bg-deepBlue hover:text-white hover:shadow-[0_8px_25px_rgba(0,0,0,0.50)] group"
                   >
                     <span>Book an Appoinment</span>
                     <span
-                      class="rounded-full bg-white text-lightBlue flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5"
+                      class="rounded-full bg-white text-lightBlue flex items-center justify-center xs:px-2 xs:py-2 sm:px-2 sm:py-2.5 transition-transform duration-300 group-hover:-rotate-12"
                     >
                       <i class="fa-solid fa-arrow-right"></i>
                     </span>
@@ -535,30 +553,33 @@
             <div
               class="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20"
             >
-              <!-- active item -->
+              <!-- item -->
               <div
-                class="flex flex-col items-center bg-cyan-500 rounded-2xl p-2"
+                class="flex flex-col items-center 
+                transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
               >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
                   <img src="./images/servi-1.png" alt="servi 1" />
                 </div>
-                <p
-                  class="xs:text-xs sm:text-sm font-medium text-center text-white"
-                >
+                <p class="xs:text-xs sm:text-sm text-center">
                   specialized <br />
                   medicine & surgery
                 </p>
               </div>
 
               <!-- item -->
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center
+              transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue">
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-2.png" alt="servi
-                  " />
+                  <img
+                    src="./images/servi-2.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   emergency & <br />
@@ -566,25 +587,34 @@
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center
+              transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue">
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-3.png" alt="servi
-                  " />
+                  <img
+                    src="./images/servi-3.png"
+                    alt="servi
+                  "
+                  />
                 </div>
-                <p class="xs:text-xs sm:text-sm text-center">
+                <p class="xs:text-xs sm:text-sm text-center
+                ">
                   laboratory <br />
                   services
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center
+              transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue">
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-4.png" alt="servi
-                  " />
+                  <img
+                    src="./images/servi-4.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   rehabilitation <br />
@@ -592,12 +622,16 @@
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center
+              transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue">
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-5.png" alt="servi
-                  " />
+                  <img
+                    src="./images/servi-5.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   women & child <br />
@@ -630,10 +664,13 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group transition-transform duration-300 group-hover:-rotate-12"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="transition-transform duration-300 group-hover:-rotate-12">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    
                   </a>
                 </div>
 
@@ -656,10 +693,13 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="transition-transform duration-300 group-hover:-rotate-12">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    
                   </a>
                 </div>
 
@@ -682,10 +722,13 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="transition-transform duration-300 group-hover:-rotate-12">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    
                   </a>
                 </div>
               </div>
@@ -801,12 +844,16 @@
           </div>
         </div>
       </section>
+      <!-- need some space section  -->
+       <!-- <section class="need-space">
+        <div class="bg-deepBlue h-20"></div>
+       </section> -->
       <!-- doctors part -->
-      <section class="doctors bg-deepBlue xs:py-16 lg:p-14 mb-30">
+      <section class="doctors bg-[url('/images/doctor-bg.png')] xs:py-16 lg:p-14 mb-30 bg-no-repeat bg-center bg-deepBlue  bg-cover">
         <div class="container relative">
-          <div class="max-w-7xl mx-auto xs:px-4 sm:px-6 font-urbanist">
+          <div class="max-w-7xl mx-auto xs:px-4 sm:px-6 font-urbanist p-20 mt-40">
             <!-- section heading -->
-            <div class="mx-auto mb-12 sm:mb-16 lg:mb-20 max-w-3xl text-center">
+            <div class="mx-auto mb-20 sm:mb-16 lg:mt-10 max-w-3xl text-center">
               <div
                 class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-cyan-400 text-cyan-500 xs:text-xs sm:text-sm mb-4 sm:mb-6 uppercase"
               >
@@ -815,7 +862,7 @@
               </div>
 
               <h2
-                class="font-semibold text-white xs:text-2xl xs:leading-tight sm:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-6"
+                class="font-semibold text-lightBlue border-lightBlue xs:text-2xl xs:leading-tight sm:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-6"
               >
                 Explore Our Comprehensive <br class="hidden sm:block" />
                 Healthcare Solutions
@@ -830,15 +877,15 @@
             </div>
 
             <!-- middle doctors image -->
-            <div
+            <!-- <div
               class="absolute z-10 mb-24 flex justify-center items-center right-10 top-100"
             >
               <img src="./images/center-doc.png" alt="doctor center img" />
-            </div>
+            </div> -->
 
             <!-- bottom cards -->
             <div
-              class="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3 items-stretch max-w-7xl mx-auto relative z-11 xs:mt-10 sm:mt-16 lg:mt-180"
+              class="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3 items-stretch max-w-7xl mx-auto relative z-11 xs:mt-6 sm:mt-16 lg:mt-6"
             >
               <!-- left filter card -->
               <div class="rounded-3xl bg-cyan-500 p-6 sm:p-8 text-white h-full">
@@ -1143,11 +1190,11 @@
                 <!-- action -->
                 <div class="pt-6">
                   <button
-                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base"
+                    class="inline-flex items-center justify-between gap-3 rounded-full font-semibold font-urbanist commonBtn regular-btn xs:px-3 xs:py-1.5 xs:text-xs sm:px-4 sm:py-2 sm:text-sm lg:px-2 lg:py-2 lg:text-base transition-all duration-300 hover:bg-deepBlue hover:text-white hover:shadow-[0_8px_25px_rgba(0,0,0,0.50)] group"
                   >
                     <span>Read More</span>
                     <span
-                      class="rounded-full bg-white text-lightBlue flex items-center justify-center px-2 py-2"
+                      class="rounded-full bg-white text-lightBlue flex items-center justify-center px-2 py-2 transition-transform duration-300 group-hover:-rotate-12"
                     >
                       <i class="fa-solid fa-arrow-right"></i>
                     </span>
@@ -1305,6 +1352,13 @@
           </div>
         </div>
       </section>
+      <!-- navi to top -->
+      <div
+        id="goTop"
+        class="go-to-top fixed bottom-6 right-6 w-8 h-8 rounded-full bg-gotop text-white flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 z-50"
+      >
+        <span class="text-xl"><i class="fa-solid fa-arrow-up"></i></span>
+      </div>
     </main>
     <footer
       class="bg-[url('/images/footer-img.png')] bg-cover bg-center relative xs:py-12 sm:py-16 lg:p-10 font-urbanist text-white"
@@ -1317,10 +1371,7 @@
           <!-- brand -->
           <div>
             <div class="mb-6">
-              <img
-                src="./images/logo.png"
-                alt="footer logo"
-              />
+              <img src="./images/logo.png" alt="footer logo" />
             </div>
 
             <p class="xs:text-xs sm:text-sm text-white/80 mb-6 max-w-xs">

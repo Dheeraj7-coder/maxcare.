@@ -107,7 +107,7 @@
               <img
                 src="./images/logo.png"
                 alt="logo"
-                class="logo-w xs:h-4 sm:h-7 lg:h-auto"
+                class="w-24 sm:w-28 md:w-32 lg:w-36 h-auto"
               />
             </div>
 
@@ -251,29 +251,33 @@
             <div
               class="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-10 mb-16 sm:mb-20"
             >
-              <!-- active item -->
+              <!-- item -->
               <div
-                class="flex flex-col items-center bg-cyan-500 rounded-2xl p-2"
+                class="flex flex-col items-center transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
               >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
                   <img src="./images/servi-1.png" alt="servi 1" />
                 </div>
-                <p
-                  class="xs:text-xs sm:text-sm font-medium text-center text-white"
-                >
+                <p class="xs:text-xs sm:text-sm text-center">
                   specialized <br />
                   medicine & surgery
                 </p>
               </div>
 
               <!-- item -->
-              <div class="flex flex-col items-center">
+              <div
+                class="flex flex-col items-center transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
+              >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-2.png" alt="" />
+                  <img
+                    src="./images/servi-2.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   emergency & <br />
@@ -281,11 +285,17 @@
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div
+                class="flex flex-col items-center transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
+              >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-3.png" alt="" />
+                  <img
+                    src="./images/servi-3.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   laboratory <br />
@@ -293,11 +303,17 @@
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div
+                class="flex flex-col items-center transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
+              >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-4.png" alt="" />
+                  <img
+                    src="./images/servi-4.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   rehabilitation <br />
@@ -305,11 +321,17 @@
                 </p>
               </div>
 
-              <div class="flex flex-col items-center">
+              <div
+                class="flex flex-col items-center transition-all duration-300 hover:bg-lightBlue hover:rounded-xl p-2 hover:text-veryLightBlue"
+              >
                 <div
                   class="xs:h-20 xs:w-20 sm:h-24 sm:w-24 lg:h-30 lg:w-30 flex items-center justify-center"
                 >
-                  <img src="./images/servi-5.png" alt="" />
+                  <img
+                    src="./images/servi-5.png"
+                    alt="servi
+                  "
+                  />
                 </div>
                 <p class="xs:text-xs sm:text-sm text-center">
                   women & child <br />
@@ -342,10 +364,14 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group transition-transform duration-300 group-hover:-rotate-12"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span
+                      class="transition-transform duration-300 group-hover:-rotate-12"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                   </a>
                 </div>
 
@@ -368,10 +394,14 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span
+                      class="transition-transform duration-300 group-hover:-rotate-12"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                   </a>
                 </div>
 
@@ -394,10 +424,14 @@
 
                   <a
                     href="#"
-                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm"
+                    class="mt-auto flex items-center gap-2 font-semibold capitalize text-sm group"
                   >
                     read more
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <span
+                      class="transition-transform duration-300 group-hover:-rotate-12"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -553,7 +587,9 @@
                   >
                     <div>
                       <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900">
+                        <h3
+                          class="text-lg font-semibold text-gray-900 capitalize"
+                        >
                           get appointment
                         </h3>
                         <div><i class="fa-solid fa-plus"></i></div>
@@ -580,10 +616,13 @@
 
                     <a
                       href="#"
-                      class="mt-6 flex justify-center gap-2 items-center font-semibold text-lg"
+                      class="mt-6 flex justify-center gap-2 items-center font-semibold text-sm group capitalize"
                     >
                       request an appointment
-                      <span><i class="fa-solid fa-arrow-right"></i></span>
+                      <span
+                        class="transition-transform duration-300 group-hover:-rotate-12"
+                        ><i class="fa-solid fa-arrow-right"></i
+                      ></span>
                     </a>
                   </div>
                 </div>
@@ -594,7 +633,9 @@
                 class="rounded-3xl bg-gradient-to-br from-cyan-100 to-cyan-400 p-8 flex flex-col justify-between"
               >
                 <div>
-                  <div class="flex justify-between items-center mb-6">
+                  <div
+                    class="flex justify-between items-center mb-6 capitalize"
+                  >
                     <h3 class="text-lg font-semibold">visit our center</h3>
                     <div><i class="fa-regular fa-house"></i></div>
                   </div>
@@ -615,10 +656,13 @@
 
                 <a
                   href="#"
-                  class="mt-8 flex gap-2 justify-center items-center font-semibold"
+                  class="mt-8 flex gap-2 justify-center items-center font-semibold group capitalize text-sm"
                 >
                   request an appointment
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span
+                    class="transition-transform duration-300 group-hover:-rotate-12"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
                 </a>
               </div>
 
@@ -627,7 +671,9 @@
                 class="rounded-3xl bg-cyan-500 text-white p-8 flex flex-col justify-between"
               >
                 <div>
-                  <div class="flex justify-between items-center mb-6">
+                  <div
+                    class="flex justify-between items-center mb-6 capitalize"
+                  >
                     <h3 class="text-lg font-semibold">opening hours</h3>
                     <div><i class="fa-regular fa-clock"></i></div>
                   </div>
@@ -660,16 +706,26 @@
 
                 <a
                   href="#"
-                  class="mt-8 flex justify-center gap-2 items-center font-semibold"
+                  class="mt-8 flex justify-center gap-2 items-center font-semibold group capitalize text-sm"
                 >
                   request an appointment
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span
+                    class="transition-transform duration-300 group-hover:-rotate-12"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- navi to top -->
+      <div
+        id="goTop"
+        class="go-to-top fixed bottom-6 right-6 w-8 h-8 rounded-full bg-gotop text-white flex items-center justify-center cursor-pointer shadow-lg transition-all duration-300 z-50"
+      >
+        <span class="text-xl"><i class="fa-solid fa-arrow-up"></i></span>
+      </div>
     </main>
     <!-- footer -->
     <footer
@@ -683,10 +739,7 @@
           <!-- brand -->
           <div>
             <div class="mb-6">
-              <img
-                src="./images/logo.png"
-                alt="footer logo"
-              />
+              <img src="./images/logo.png" alt="footer logo" />
             </div>
 
             <p class="xs:text-xs sm:text-sm text-white/80 mb-6 max-w-xs">

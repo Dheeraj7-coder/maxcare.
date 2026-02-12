@@ -18,11 +18,13 @@
     --color-redBg: #E4354A;
     --color-inactive: #E7E7E7;
     --color-btn-purpose: #000137;
+    --color-gotop:#04053D;
 }
 
 @utility active {
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
+    border-bottom: 2px solid white ;
 }
 
 @utility logo-w {
@@ -279,4 +281,8 @@ select.error {
   border-color: #ef4444;
 }
 }
+
+
 /* <i class="fa-solid fa-stethoscope"></i> */
+
+/* transition-transform duration-300 group-hover:-rotate-12 */
