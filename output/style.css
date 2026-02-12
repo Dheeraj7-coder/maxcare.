@@ -761,18 +761,6 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\'\/images\/doctor-bg\.png\'\)\] {
-    background-image: url('/images/doctor-bg.png');
-  }
-  .bg-\[url\(\'\/images\/float\.png\'\)\] {
-    background-image: url('/images/float.png');
-  }
-  .bg-\[url\(\'\/images\/footer-img\.png\'\)\] {
-    background-image: url('/images/footer-img.png');
-  }
-  .bg-\[url\(\'\/images\/page-banner\.png\'\)\] {
-    background-image: url('/images/page-banner.png');
-  }
   .from-cyan-100 {
     --tw-gradient-from: var(--color-cyan-100);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -2123,6 +2111,20 @@
 @layer utilities {
   .call-ring {
     animation: rotateRing 2.5s linear infinite;
+  }
+}
+@keyframes bannerSlide {
+  0% {
+    background-image: url("./images/banner-1.png");
+  }
+  33% {
+    background-image: url("./images/banner-2.png");
+  }
+  66% {
+    background-image: url("./images/banner-3.png");
+  }
+  100% {
+    background-image: url("./images/banner-1.png");
   }
 }
 @keyframes moveLTR {
