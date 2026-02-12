@@ -9,9 +9,9 @@ toggleBtn.addEventListener("click", () => {
 // sliding banner part
 const banner = document.getElementById("banner");
 const images = [
-  "/images/Banner-1.png",
-  "/images/Banner-2.png",
-  "/images/Banner-3.png",
+  "/images/banner-1.png",
+  "/images/banner-2.png",
+  "/images/banner-3.png",
 ];
 
 let index = 0;
